@@ -1,0 +1,67 @@
+import { themes } from "mdx-deck";
+import { CodeSurfer } from "code-surfer"
+import { dracula } from "@code-surfer/themes"
+import Code from 'mdx-code';
+
+export const theme = {
+  ...themes.prism,
+  ...themes.dracula,
+  colors: {
+    text: "black",
+    background: "white",
+    primary: "orange"
+  }
+};
+
+
+<Header>
+  <Image src='https://i.imgur.com/APlEynd.png' style={{height: 60, width: 60, marginTop: 10}}/>
+</Header>
+
+<Footer>
+  <div style={{marginBottom: 10, fontWeight: '500', fontSize: 14, opacity: .5}}>Osama Qarem</div>
+</Footer>
+
+# Hello
+
+ - Preliminary Modern JavaScript quiz (show counter)
+ - Why should I care about React?
+ - Facebook v PHP (Why was React created?)
+ - Why is React successful?
+ - But I hate JavaScript ()
+ - TypeScript
+
+---
+
+<CodeSurfer >
+
+```js
+console.log(1);
+console.log(2);
+console.log(3);
+```
+
+```js 1
+console.log(1);
+console.log(2);
+console.log(3);
+```
+
+```js
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+console.log(5);
+```
+
+</CodeSurfer>
+
+---
+
+## This is my deck
+
+
+---
+
+## The End
