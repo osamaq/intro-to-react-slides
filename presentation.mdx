@@ -1,7 +1,10 @@
 import { themes } from "mdx-deck";
 import { CodeSurfer } from "code-surfer"
 import { dracula } from "@code-surfer/themes"
-import Code from 'mdx-code';
+import Images from "./Images.js";
+import Innov8tifHeader from "./components/Innov8tifHeader.js";
+import CoolReact from "./components/CoolReact.js"
+import ReactLogo from "./components/ReactLogo.js"
 
 export const theme = {
   ...themes.prism,
@@ -10,58 +13,127 @@ export const theme = {
     text: "black",
     background: "white",
     primary: "orange"
+  },
+   fonts: {
+    body: "'Open Sans', ",
+  },
+  styles: {
+    blockquote: {
+      fontStyle: 'italic'
+    },
+    ul: {
+      listStyle: 'none'
+    },
+    li:{
+      marginTop: 12
+    }
   }
 };
 
+export const absoluteHeader = {    
+    position: 'absolute',
+    top: '10%',
+    bottom: 0,
+    zIndex: 1,
+    alignSelf: 'center'
+  }
+
+export const fullScreenImage = {...absoluteHeader, top: 0, objectFit: "cover", zIndex: 10}
 
 <Header>
-  <Image src='https://i.imgur.com/APlEynd.png' style={{height: 60, width: 60, marginTop: 10}}/>
+  <Innov8tifHeader/>
 </Header>
 
 <Footer>
   <div style={{marginBottom: 10, fontWeight: '500', fontSize: 14, opacity: .5}}>Osama Qarem</div>
 </Footer>
 
-# Hello
 
- - Preliminary Modern JavaScript quiz (show counter)
- - Why should I care about React?
- - Facebook v PHP (Why was React created?)
- - Why is React successful?
- - But I hate JavaScript ()
- - TypeScript
 
----
 
-<CodeSurfer >
 
-```js
-console.log(1);
-console.log(2);
-console.log(3);
-```
 
-```js 1
-console.log(1);
-console.log(2);
-console.log(3);
-```
 
-```js
-console.log(1);
-console.log(2);
-console.log(3);
-console.log(4);
-console.log(5);
-```
+<!-- START -->
 
-</CodeSurfer>
+<Steps>
+
+  # Hi 👋
+
+</Steps>
 
 ---
 
-## This is my deck
+# What this talk is
+
+<ul>
+  <li>• Drive interest in <CoolReact/> <ReactLogo/></li>
+  <li>• Fundamentals overview</li>
+  <li>• Live coding</li>
+  <li>• Fun learning
+    <span style = {{
+      position: 'relative',
+      bottom: '10px',
+      left: '5px',
+      fontSize: '40%', 
+      width: '100%',
+      textAlign: 'center'}}>
+      hopefully 😱
+      </span>
+  </li>
+</ul>
+
+<Notes>
+
+  - What is a framework?
+  - All cars are similar.
+  - React (Electric/Autonomous cars) came along
+
+</Notes>
 
 
 ---
 
-## The End
+<iframe sandbox="allow-forms allow-scripts" height='500' title='KxPVjm' src='https://insights.stackoverflow.com/survey/2019#technology-_-most-loved-dreaded-and-wanted-web-frameworks' frameBorder='no' allowtransparency='true' allowFullScreen={true} style={{ width: '100%', outline: 'none' }}/>
+
+<Notes>
+
+  - Everyone who drove a Tesla, wants to drive a tesla again.
+
+</Notes>
+
+---
+
+<img src={Images.twitch} style={fullScreenImage}/>
+
+---
+
+<img src={Images.airbnb} style={fullScreenImage}/>
+
+---
+
+<img src={Images.netflix} style={fullScreenImage}/>
+
+---
+
+<img src={Images.bf1} style={{...fullScreenImage, objectFit: 'scale-down'}}/>
+
+<Notes>
+
+- Why are C# developers using React and JS?
+
+</Notes>
+
+---
+
+# What problems is <CoolReact/> solving?
+
+<Notes>
+
+  - A bit of history
+
+</Notes>
+
+---
+
+# What problems is <CoolReact/> solving?
