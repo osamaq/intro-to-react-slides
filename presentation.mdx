@@ -1,6 +1,6 @@
 import { themes } from "mdx-deck";
-import { CodeSurfer } from "code-surfer"
-import { dracula } from "@code-surfer/themes"
+import { CodeSurfer, CodeSurferColumns, Step  } from "code-surfer"
+import { dracula, github } from "@code-surfer/themes"
 import Images from "./Images.js";
 import Intro from "./components/Intro.js";
 import Innov8tifHeader from "./components/Innov8tifHeader.js";
@@ -20,7 +20,10 @@ export const theme = {
   },
   styles: {
     blockquote: {
-      fontStyle: 'italic'
+      fontStyle: 'italic',
+      borderLeft: '15px solid orange',
+      padding: '30px',
+      borderRadius: '30px'
     },
     ul: {
       listStyle: 'none'
@@ -41,6 +44,8 @@ export const absoluteHeader = {
 
 export const fullScreenImage = {...absoluteHeader, top: 0, objectFit: "cover", zIndex: 10}
 
+export const zoomableImage = {height: 'auto', width: 'auto' };
+
 <Header>
   <Innov8tifHeader/>
 </Header>
@@ -48,8 +53,6 @@ export const fullScreenImage = {...absoluteHeader, top: 0, objectFit: "cover", z
 <Footer>
   <div style={{marginBottom: 10, fontWeight: '500', fontSize: 14, opacity: .5}}>Osama Qarem</div>
 </Footer>
-
-
 
 
 
@@ -88,6 +91,15 @@ export const fullScreenImage = {...absoluteHeader, top: 0, objectFit: "cover", z
 
 </Notes>
 
+---
+
+ <img src={Images.jsx} style={{...zoomableImage, minHeight: '70vh'}}/>
+
+ <Notes>
+
+    - The gas pedal is also the brake pedal.
+
+ </Notes>
 
 ---
 
@@ -123,7 +135,7 @@ export const fullScreenImage = {...absoluteHeader, top: 0, objectFit: "cover", z
 
 ---
 
-# What problems is <CoolReact/> solving?
+> # What problems is <CoolReact noUnderline={true}/> solving?
 
 <Notes>
 
@@ -133,8 +145,106 @@ export const fullScreenImage = {...absoluteHeader, top: 0, objectFit: "cover", z
 
 ---
 
+<img src={Images.message} style={{...zoomableImage, maxHeight: '80vh'}} />
+
+<Notes>
+
+  - Its a classic distributed systems problem.
+
+  - Click a message notification. Ops, you already read it.
+
+  - They tried to fix it, it kept coming back.
+
+  - You have 2 independent actors, you interacting with the browser
+
+</Notes>
+
+---
+
+<img src={Images.vdom} style={{...zoomableImage, maxHeight: '80vh'}} />
+
+<Notes>
+
+  - Easily keep UI in sync with application state.
+
+</Notes>
+
+---
+
+<img src={Images.mvc} style={{...zoomableImage, maxHeight: '80vh'}} />
+
+
+<Notes>
+
+  - MVC allowed views to be talk to models.
+
+  - Debugging is hard.
+
+</Notes>
+
+---
+
+<img src={Images.flux} style={{...zoomableImage, maxHeight: '80vh'}} />
+
+<Notes>
+
+
+  - 1 way data flow.
+
+  - Debugging is easy.
+
+  - Climbing a tree.
+
+  - You don't need to know this to be productive.
+
+</Notes>
+
+---
+
+# Other 💪🏻
+
+- • Build components — encourages view modularity.
+- • State management tools.
+
+---
+
+# Thirsty for some actual code?
+
+
+### <p><span style={{fontWeight: 'normal'}}>Its time for some </span><s><CoolReact/></s><span style={{fontWeight: 'normal'}}> <b>modern JavaScript 😬</b></span></p>
 
 
 ---
 
-# What problems is <CoolReact/> solving?
+<CodeSurferColumns>
+
+<Step subtitle="First Step">
+
+```js
+console.log(1);
+console.log(2);
+```
+
+```js
+console.log("a");
+console.log("b");
+```
+
+</Step>
+
+<Step subtitle="Second Step">
+
+```js 2
+console.log(1);
+console.log(2);
+```
+
+```js 2
+console.log("a");
+console.log("b");
+```
+
+</Step>
+
+</CodeSurferColumns>
+
