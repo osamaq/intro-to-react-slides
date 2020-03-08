@@ -11,9 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mdx-deck": "^4.0.0"
+    "gatsby-source-filesystem": "^2.1.50",
+    "mdx-deck": "4.1.0"
   },
   "dependencies": {
-    "code-surfer": "^3.0.0"
+    "code-surfer": "^3.1.0"
   }
 }

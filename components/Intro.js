@@ -1,7 +1,7 @@
-import React from "react";
-import ReactLogo from "./ReactLogo";
-import CoolReact from "./CoolReact";
-import innov8tifLogo from "../assets/innov8tif_full.png";
+import React from "react"
+import ReactLogo from "./ReactLogo"
+import CoolText from "./CoolText"
+import innov8tifLogo from "../assets/innov8tif_full.png"
 
 export default function Intro() {
   return (
@@ -22,7 +22,7 @@ export default function Intro() {
     >
       <header style={{ textAlign: "center", padding: "50px" }}>
         <h1 style={{ fontWeight: "bold", letterSpacing: 1.2 }}>
-          Introduction to <CoolReact />
+          Introduction to <CoolText />
           <ReactLogo
             style={{ height: "66px", width: "auto", top: "14px", left: "18px" }}
           />
@@ -57,5 +57,5 @@ export default function Intro() {
         </span>
       </p>
     </div>
-  );
+  )
 }

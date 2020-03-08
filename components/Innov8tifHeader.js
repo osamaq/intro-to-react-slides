@@ -1,6 +1,6 @@
-import React from "react";
-import innov8tif from "../assets/innov8tif.png";
-import ReactLogo from "./ReactLogo";
+import React from "react"
+import innov8tif from "../assets/innov8tif.png"
+import ReactLogo from "./ReactLogo"
 
 const styleSheet = {
   logo: { height: 60, width: 60, marginTop: 10 },
@@ -13,7 +13,7 @@ const styleSheet = {
     marginRight: "15px",
     marginLeft: "15px"
   }
-};
+}
 
 export default function Innov8tifHeader() {
   return (
@@ -22,5 +22,5 @@ export default function Innov8tifHeader() {
       <span style={styleSheet.span}>+</span>
       <ReactLogo style={{ ...styleSheet.logo, top: 0, left: "-2px" }} />
     </>
-  );
+  )
 }

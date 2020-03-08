@@ -10,6 +10,7 @@ import flux from "./assets/flux.png"
 import vdom from "./assets/vdom.png"
 import unsafebiker from "./assets/unsafebiker.png"
 import safebiker from "./assets/safebiker.jpg"
+import codesandbox from "./assets/codesandbox.jpg"
 
 export default {
   netflix,
@@ -23,5 +24,6 @@ export default {
   flux,
   vdom,
   unsafebiker,
-  safebiker
+  safebiker,
+  codesandbox
 }

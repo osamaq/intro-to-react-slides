@@ -4,7 +4,7 @@ import { dracula, github } from "@code-surfer/themes"
 import Images from "./Images.js";
 import Intro from "./components/Intro.js";
 import Innov8tifHeader from "./components/Innov8tifHeader.js";
-import CoolReact from "./components/CoolReact.js"
+import CoolText from "./components/CoolText.js"
 import ReactLogo from "./components/ReactLogo.js"
 
 export const theme = {
@@ -67,7 +67,7 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 # What this talk is
 
 <ul>
-  <li>• Drive interest in <CoolReact/> <ReactLogo/></li>
+  <li>• Drive interest in <CoolText/> <ReactLogo/></li>
   <li>• Fundamentals overview</li>
   <li>• Live coding</li>
   <li>• Fun learning
@@ -128,7 +128,7 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 
 ---
 
-> # What problems is <CoolReact noUnderline={true}/> solving?
+> # What problems is <CoolText noUnderline={true}/> solving?
 
 <Notes>
 
@@ -205,7 +205,7 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 
 ---
 
-# <p><span style={{fontWeight: 'normal'}}>Ready for some </span><s><CoolReact/></s><span style={{fontWeight: 'normal'}}> <b>modern JavaScript 😬?</b></span></p>
+# <p><span style={{fontWeight: 'normal'}}>Ready for some </span><s><CoolText/></s><span style={{fontWeight: 'normal'}}> <b>modern JavaScript 😬?</b></span></p>
 
 <Notes>
 
@@ -585,13 +585,14 @@ function myFunction (){
 
 <Step>
 
-#### React Function Component
+#### <CoolText/> Function Component
 
 
-```jsx 1:4
-function myComponent (){
+```jsx 1:5
+function Innov8tif (){
+  const name = "Innov8tif"
 
-  return <div></div>
+  return <div>{name}</div>
 }
 
 ```
@@ -600,13 +601,54 @@ function myComponent (){
 
 <Step>
 
-#### A function that returns JSX
+#### <CoolText/> Function Component<br/><br/>A function that returns <CoolText text="JSX" noUnderline/>
 
 
-```jsx
-function myComponent (){
+```jsx 1:5
+function Innov8tif (){
+  const name = "Innov8tif"
 
-  return <div></div>
+  return <div>{name}</div>
+}
+
+```
+
+</Step>
+
+<Step>
+
+#### Use it in <CoolText text="another component" noUnderline/>
+
+```jsx 1:10
+function App (){
+
+  return <Innov8tif/>
+}
+
+function Innov8tif (){
+  const name = "Innov8tif"
+
+  return <div>{name}</div>
+}
+
+```
+
+</Step>
+
+<Step>
+
+#### Use it in <CoolText text="another component" noUnderline/>
+
+```jsx 1:10
+function App (){
+
+  return <Innov8tif/>
+}
+
+function Innov8tif (){
+  const name = "Innov8tif"
+
+  return <div>{name}</div>
 }
 
 ```
@@ -617,5 +659,25 @@ function myComponent (){
 
 </div>
 
+
+---
+
+<video  height="90%" controls>
+  <source src={require("./assets/twitter.mp4")} type="video/mp4"/>
+</video>
+
+---
+
+# Play with <CoolText/>!
+
+<a href="https://codesandbox.io" target="_blank" style={{marginTop: "5%"}}>
+ <img src={Images.codesandbox} style={{...zoomableImage, maxHeight: '50vh'}}/>
+</a>
+
+---
+
+# Suggested Resources
+
+- 
 
 ---
