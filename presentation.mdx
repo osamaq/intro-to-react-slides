@@ -85,9 +85,7 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 
 <Notes>
 
-  - What is a framework?
-  - All cars are similar.
-  - React (Electric/Autonomous cars) came along
+  - What is React?
 
 </Notes>
 
@@ -95,11 +93,6 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 
  <img src={Images.jsx} style={{...zoomableImage, minHeight: '70vh'}}/>
 
- <Notes>
-
-    - The gas pedal is also the brake pedal.
-
- </Notes>
 
 ---
 
@@ -153,9 +146,42 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 
   - Click a message notification. Ops, you already read it.
 
-  - They tried to fix it, it kept coming back.
+  - They tried to fix many edge cases, it kept coming back.
 
-  - You have 2 independent actors, you interacting with the browser
+  - Something is fundamentally broken
+
+</Notes>
+
+---
+
+<img src={Images.mvc_basic} style={{...zoomableImage, maxHeight: '80vh'}} />
+
+---
+
+<img src={Images.mvc} style={{...zoomableImage, maxHeight: '80vh'}} />
+
+
+<Notes>
+
+  - Infinite loop.
+
+  - Debugging is hard.
+
+</Notes>
+
+---
+
+<img src={Images.flux} style={{...zoomableImage, maxHeight: '80vh'}} />
+
+<Notes>
+
+  - 1 way data flow.
+
+  - Debugging is easy.
+
+  - Climbing a tree.
+
+  - You don't need to know this to be productive.
 
 </Notes>
 
@@ -171,80 +197,425 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 
 ---
 
-<img src={Images.mvc} style={{...zoomableImage, maxHeight: '80vh'}} />
+# Other Benefits 💪🏻
 
-
-<Notes>
-
-  - MVC allowed views to be talk to models.
-
-  - Debugging is hard.
-
-</Notes>
-
----
-
-<img src={Images.flux} style={{...zoomableImage, maxHeight: '80vh'}} />
-
-<Notes>
-
-
-  - 1 way data flow.
-
-  - Debugging is easy.
-
-  - Climbing a tree.
-
-  - You don't need to know this to be productive.
-
-</Notes>
-
----
-
-# Other 💪🏻
-
-- • Build components — encourages view modularity.
+- • Declarative UI code — less room for mistakes.
+- • Build reusuable components — encourages modularity.
 - • State management tools.
 
 ---
 
-# Thirsty for some actual code?
+# <p><span style={{fontWeight: 'normal'}}>Ready for some </span><s><CoolReact/></s><span style={{fontWeight: 'normal'}}> <b>modern JavaScript 😬?</b></span></p>
+
+<Notes>
+
+  - Where JS ends and React begins
+
+</Notes>
+
+---
+
+<img src={Images.safebiker} style={{...fullScreenImage, objectFit: "contain"}}/>
+
+___
+
+<img src={Images.unsafebiker} style={{...fullScreenImage, objectFit: "contain"}}/>
+
+---
+
+<div style = {{fontSize: '3rem'}}>
+
+<CodeSurfer >
+
+  ```js title="Declarations"
+  var one
 
 
-### <p><span style={{fontWeight: 'normal'}}>Its time for some </span><s><CoolReact/></s><span style={{fontWeight: 'normal'}}> <b>modern JavaScript 😬</b></span></p>
+  let two
+
+
+  const three
+  ```
+
+</CodeSurfer>
+
+</div>
 
 
 ---
 
+
+<div style = {{fontSize: '3.5rem'}}>
+
 <CodeSurferColumns>
 
-<Step subtitle="First Step">
+<Step title="Difference in Scope" >
 
-```js
-console.log(1);
-console.log(2);
+```js 
+function example() {
+  
+  if(true){
+    var i = 123
+  }
+
+  console.log(i) 
+  
+}
 ```
 
-```js
-console.log("a");
-console.log("b");
+```js 
+function example() {
+  
+  if(true){
+    let i = 123
+  }
+
+  console.log(i) 
+  
+}
 ```
 
 </Step>
 
-<Step subtitle="Second Step">
+<Step title="Difference in Scope" >
 
-```js 2
-console.log(1);
-console.log(2);
+```js 4[5,6,7,8,9],7,8
+function example() {
+  
+  if(true){
+    var i = 123
+  }
+
+  console.log(i) 
+  
+}
 ```
 
-```js 2
-console.log("a");
-console.log("b");
+```js 4[5,6,7,8,9],7,8
+function example() {
+  
+  if(true){
+    let i = 123
+  }
+
+  console.log(i) 
+  
+}
+```
+
+</Step>
+
+<Step title="Difference in Scope" >
+
+```js 4,7,8
+function example() {
+
+  if(true){
+    var i = 123
+  }
+
+  console.log(i) 
+  // 123
+}
+```
+
+```js 4,7,8
+function example() {
+
+  if(true){
+    let i = 123
+  }
+
+  console.log(i) 
+  // ReferenceError
+}
+```
+
+</Step>
+
+<Step title="Difference in Scope" >
+
+```js 3,5 
+function example() {
+
+  console.log(i)
+
+  var i = "Hmm..."
+}
+```
+
+```js 3,5
+function example() {
+
+  console.log(x)
+
+  let x = "Hmm..."
+}
+```
+
+</Step>
+
+<Step title="Difference in Scope" >
+
+```js 3,4,6 
+function example() {
+
+  console.log(i)
+  // undefined
+
+  var i = "Hmm..."
+}
+```
+
+```js 3,4,6
+function example() {
+
+  console.log(x)
+  // ReferenceError
+
+  let x = "Hmm..."
+}
 ```
 
 </Step>
 
 </CodeSurferColumns>
 
+</div>
+
+---
+---
+
+<div style = {{fontSize: '3.5rem'}}>
+
+<CodeSurfer >
+
+  ```js title="Object Destructuring" 
+  const car = { make: "Honda", model: "Civic", year: "2020" }
+
+  const make = car.make
+  const model = car.model
+  const year = car.year
+  ```
+
+  ```js 1,7,8 title="Object Destructuring"
+  const car = { make: "Honda", model: "Civic", year: "2020" }
+
+  const make = car.make
+  const model = car.model
+  const year = car.year
+
+  // Destructured
+  const { make, model, year } = car
+  ```
+
+  
+  ```js title="Array Destructuring" 
+  const listOfMonths = [ "March", "April", "May" ]
+
+  const march = listOfMonths[0]
+  const april = listOfMonths[1]
+  const may = listOfMonths[2]
+  ```
+
+  ```js 1,8,9 title="Array Destructuring" 
+  const listOfMonths = [ "March", "April", "May" ]
+
+  const march = listOfMonths[0]
+  const april = listOfMonths[1]
+  const may = listOfMonths[2]
+
+  // Destructured
+  const [ march, april, may ] = listOfMonths
+
+  ```
+
+
+  ```js title="Spread Operator" 
+  const car = {
+    make: "Nissan",
+    model: "Skyline GT-R",
+    year: "2020",
+    topSpeed: "Slower than Myvi",
+  }
+
+  const carClone = {
+    make: car.make,
+    model: car.model,
+    year: car.year,
+    topSpeed: car.topSpeed,
+  }  
+  ```
+
+  ```js title="Spread Operator" 
+  const car = {
+    make: "Nissan",
+    model: "Skyline GT-R",
+    year: "2020",
+    topSpeed: "Slower than Myvi",
+  }
+
+  const carClone = { ...car }  
+  ```
+
+  ```js title="Spread Operator" 
+  const listOfMonths = [ "March", "April", "May" ]
+
+  const listOfMonthsClone = [ ...listOfMonths ]
+  ```
+
+</CodeSurfer >
+
+</div>
+
+---
+---
+
+<div style = {{fontSize: '3.5rem'}}>
+
+<CodeSurfer >
+
+```js title="Functions" 
+              
+  function wow (){
+
+  }
+
+```
+
+```js 1:11 title="Higher–Order Functions" 
+
+  const wow = function (){
+
+  }
+
+```
+
+```js 1:11 title="Higher–Order Functions" 
+
+  const wow = function (){
+
+    return function (){
+
+      
+      
+
+    } 
+  }
+
+```
+
+```js 1:11 title="Composition" 
+  const wow = function (){
+
+    return function (){
+
+      return function (){
+
+      }   
+    } 
+  }
+
+```
+
+```js 1:11 title="Composition" 
+  const wow = function (){
+
+    return function (){
+
+      return function (){
+
+      }   
+    } 
+  }
+
+```
+
+```js 1:11 title="Composition" 
+  const wow = function (){
+
+    return function (){
+
+      return function (){
+
+      }   
+    } 
+  }
+
+  wow()()()
+
+```
+
+```js title="Arrow Functions" 
+  const wow = () => {}
+
+```
+
+```js title="Arrow Functions" 
+  const wow = () => () => () => {}
+
+  wow()()()
+
+```
+
+</CodeSurfer >
+
+</div>
+
+---
+---
+
+<div style = {{fontSize: '3.5rem'}}>
+
+<CodeSurferColumns>
+
+<Step >
+
+### Function
+
+```jsx
+function myFunction (){
+
+  return null
+}
+
+```
+
+</Step>
+
+<Step>
+
+#### React Function Component
+
+
+```jsx 1:4
+function myComponent (){
+
+  return <div></div>
+}
+
+```
+
+</Step>
+
+<Step>
+
+#### A function that returns JSX
+
+
+```jsx
+function myComponent (){
+
+  return <div></div>
+}
+
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+</div>
+
+
+---
