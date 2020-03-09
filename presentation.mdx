@@ -67,9 +67,9 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 # What this talk is
 
 <ul>
+  <li>• High-level intro</li>
+  <li>• Not super technical</li>
   <li>• Drive interest in <CoolText/> <ReactLogo/></li>
-  <li>• Fundamentals overview</li>
-  <li>• Live coding</li>
   <li>• Fun learning
     <span style = {{
       position: 'relative',
@@ -83,11 +83,9 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
   </li>
 </ul>
 
-<Notes>
+---
 
-  - What is React?
-
-</Notes>
+# What is a _framework_?
 
 ---
 
@@ -171,6 +169,10 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 
 ---
 
+# Managing state is hard
+
+---
+
 <img src={Images.flux} style={{...zoomableImage, maxHeight: '80vh'}} />
 
 <Notes>
@@ -187,6 +189,10 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
 
 ---
 
+<img src={Images.fun} style={{...zoomableImage, maxHeight: '80vh'}} />
+
+---
+
 <img src={Images.vdom} style={{...zoomableImage, maxHeight: '80vh'}} />
 
 <Notes>
@@ -194,14 +200,6 @@ export const zoomableImage = {height: 'auto', width: 'auto' };
   - Easily keep UI in sync with application state.
 
 </Notes>
-
----
-
-# Other Benefits 💪🏻
-
-- • Declarative UI code — less room for mistakes.
-- • Build reusuable components — encourages modularity.
-- • State management tools.
 
 ---
 
@@ -391,6 +389,16 @@ function example() {
 <CodeSurfer >
 
   ```js title="Object Destructuring" 
+  const car = { }
+
+  ```
+
+  ```js title="Object Destructuring" 
+  const car = { make: "Honda", model: "Civic", year: "2020" }
+
+  ```
+
+  ```js title="Object Destructuring" 
   const car = { make: "Honda", model: "Civic", year: "2020" }
 
   const make = car.make
@@ -408,7 +416,16 @@ function example() {
   // Destructured
   const { make, model, year } = car
   ```
+  
+  ```js title="Array Destructuring" 
+  const listOfMonths = [ ]
 
+  ```
+  
+  ```js title="Array Destructuring" 
+  const listOfMonths = [ "March", "April", "May" ]
+
+  ```
   
   ```js title="Array Destructuring" 
   const listOfMonths = [ "March", "April", "May" ]
@@ -430,6 +447,16 @@ function example() {
 
   ```
 
+
+  ```js title="Spread Operator" 
+  const car = {
+    make: "Nissan",
+    model: "Skyline GT-R",
+    year: "2020",
+    topSpeed: "Slower than Myvi",
+  }
+
+  ```
 
   ```js title="Spread Operator" 
   const car = {
@@ -483,7 +510,7 @@ function example() {
 
 ```
 
-```js 1:11 title="Higher–Order Functions" 
+```js 1:11 title="First-class Functions" 
 
   const wow = function (){
 
